@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyDependencyInjectionStart">
         <activity
-            android:name=".MainActivity"
+            android:name=".exapmle2.presentation.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
