@@ -4,10 +4,6 @@ import javax.inject.Inject
 
 class Activity {
 
-    @Inject
-    lateinit var keyboard: Keyboard
+    val keyboard: Keyboard = DaggerNewComponent.create().getKeyboard()
 
-    init {
-        DaggerNewComponent.create().inject(this)
-    }
 }
