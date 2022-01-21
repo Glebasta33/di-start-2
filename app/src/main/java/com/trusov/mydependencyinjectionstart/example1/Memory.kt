@@ -1,4 +1,6 @@
 package com.trusov.mydependencyinjectionstart.example1
 
-class Memory {
+import javax.inject.Inject
+
+class Memory @Inject constructor() {
 }
