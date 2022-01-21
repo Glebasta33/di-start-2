@@ -1,5 +1,7 @@
 package com.trusov.mydependencyinjectionstart.example1
 
-class Monitor {
+import javax.inject.Inject
+
+class Monitor @Inject constructor() {
 
 }
