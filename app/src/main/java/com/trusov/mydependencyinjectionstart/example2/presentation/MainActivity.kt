@@ -1,4 +1,4 @@
-package com.trusov.mydependencyinjectionstart.exapmle2.presentation
+package com.trusov.mydependencyinjectionstart.example2.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

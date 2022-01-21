@@ -1,4 +1,4 @@
-package com.trusov.mydependencyinjectionstart.exapmle2.domain
+package com.trusov.mydependencyinjectionstart.example2.domain
 
 class ExampleUseCase(
     private val repository: ExampleRepository
