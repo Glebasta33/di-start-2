@@ -4,8 +4,9 @@ import com.trusov.mydependencyinjectionstart.example2.data.datasource.ExampleLoc
 import com.trusov.mydependencyinjectionstart.example2.data.datasource.ExampleRemoteDataSource
 import com.trusov.mydependencyinjectionstart.example2.data.mapper.ExampleMapper
 import com.trusov.mydependencyinjectionstart.example2.domain.ExampleRepository
+import javax.inject.Inject
 
-class ExampleRepositoryImpl(
+class ExampleRepositoryImpl @Inject constructor(
     private val localDataSource: ExampleLocalDataSource,
     private val remoteDataSource: ExampleRemoteDataSource,
     private val mapper: ExampleMapper
