@@ -6,10 +6,12 @@ import com.trusov.mydependencyinjectionstart.R
 import com.trusov.mydependencyinjectionstart.example1.Activity
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var viewModel: ExampleViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val activity = Activity()
-        activity.computer.toString()
+        viewModel.method()
     }
 }

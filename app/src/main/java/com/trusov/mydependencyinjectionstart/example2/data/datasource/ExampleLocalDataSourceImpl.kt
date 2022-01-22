@@ -7,6 +7,6 @@ class ExampleLocalDataSourceImpl(
 ): ExampleLocalDataSource {
 
     override fun method() {
-
+        database.method()
     }
 }
