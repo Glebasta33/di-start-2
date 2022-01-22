@@ -4,19 +4,15 @@ import com.trusov.mydependencyinjectionstart.example2.data.datasource.ExampleLoc
 import com.trusov.mydependencyinjectionstart.example2.data.datasource.ExampleLocalDataSourceImpl
 import com.trusov.mydependencyinjectionstart.example2.data.datasource.ExampleRemoteDataSource
 import com.trusov.mydependencyinjectionstart.example2.data.datasource.ExampleRemoteDataSourceImpl
+import dagger.Binds
 import dagger.Module
-import dagger.Provides
 
 @Module
-class DataModule {
+interface DataModule {
 
-    @Provides
-    fun provideLocalDataSource(impl: ExampleLocalDataSourceImpl): ExampleLocalDataSource {
-        return impl
-    }
+    @Binds
+    fun bindLocalDataSource(impl: ExampleLocalDataSourceImpl): ExampleLocalDataSource
 
-    @Provides
-    fun provideRemoteDataSource(impl: ExampleRemoteDataSourceImpl): ExampleRemoteDataSource {
-        return impl
-    }
+    @Binds
+    fun bindRemoteDataSource(impl: ExampleRemoteDataSourceImpl): ExampleRemoteDataSource
 }
