@@ -15,6 +15,9 @@ interface ApplicationComponent {
         @BindsInstance
         fun putContextIntoDagger(context: Context): ApplicationComponentBuilder
 
+        @BindsInstance
+        fun putTimestampIntoDagger(timestamp: Long): ApplicationComponentBuilder
+
         fun buildMyComponent(): ApplicationComponent
     }
 }
