@@ -1,9 +1,9 @@
 package com.trusov.mydependencyinjectionstart.example2.presentation
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.trusov.mydependencyinjectionstart.R
-import com.trusov.mydependencyinjectionstart.example2.di.DaggerApplicationComponent
+import com.trusov.mydependencyinjectionstart.example2.ExampleApp
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
@@ -11,8 +11,7 @@ class MainActivity : AppCompatActivity() {
     @Inject
     lateinit var viewModel: ExampleViewModel
     private val component by lazy {
-        DaggerApplicationComponent.factory()
-            .create(application, System.currentTimeMillis())
+        (application as ExampleApp).component
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
