@@ -3,10 +3,11 @@ package com.trusov.mydependencyinjectionstart.example2.data.network
 import android.content.Context
 import android.util.Log
 import com.trusov.mydependencyinjectionstart.R
+import com.trusov.mydependencyinjectionstart.example2.di.ApplicationScope
 import javax.inject.Inject
 import javax.inject.Singleton
 
-@Singleton
+@ApplicationScope
 class ExampleApiService @Inject constructor(
     private val context: Context,
     private val timestamp: Long
