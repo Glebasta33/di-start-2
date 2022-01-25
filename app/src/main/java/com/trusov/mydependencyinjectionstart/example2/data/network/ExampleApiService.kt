@@ -7,7 +7,6 @@ import com.trusov.mydependencyinjectionstart.example2.di.ApplicationScope
 import javax.inject.Inject
 import javax.inject.Singleton
 
-@ApplicationScope
 class ExampleApiService @Inject constructor(
     private val context: Context,
     private val timestamp: Long
