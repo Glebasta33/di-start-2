@@ -1,15 +1,13 @@
 package com.trusov.mydependencyinjectionstart.example2.presentation
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.trusov.mydependencyinjectionstart.R
 import com.trusov.mydependencyinjectionstart.example2.ExampleApp
 import javax.inject.Inject
 
-class MainActivity : AppCompatActivity() {
+class MainActivity2 : AppCompatActivity() {
 
     @Inject
     lateinit var viewModelFactory: ViewModelFactory
@@ -29,12 +27,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         component.inject(this)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        findViewById<TextView>(R.id.tv_hello_world).setOnClickListener {
-            Intent(this, MainActivity2::class.java).apply {
-                startActivity(this)
-            }
-        }
+        setContentView(R.layout.activity_main2)
         viewModel.method()
         viewModel2.method()
     }
