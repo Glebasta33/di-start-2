@@ -1,9 +1,6 @@
 package com.trusov.mydependencyinjectionstart.example2.di
 
-import com.trusov.mydependencyinjectionstart.example2.data.datasource.ExampleLocalDataSource
-import com.trusov.mydependencyinjectionstart.example2.data.datasource.ExampleLocalDataSourceImpl
-import com.trusov.mydependencyinjectionstart.example2.data.datasource.ExampleRemoteDataSource
-import com.trusov.mydependencyinjectionstart.example2.data.datasource.ExampleRemoteDataSourceImpl
+import com.trusov.mydependencyinjectionstart.example2.data.datasource.*
 import dagger.Binds
 import dagger.Module
 
@@ -13,6 +10,11 @@ interface DataModule {
     @Binds
     fun bindLocalDataSource(impl: ExampleLocalDataSourceImpl): ExampleLocalDataSource
 
+    @ExampleRemoteDataSourceQualifier
     @Binds
     fun bindRemoteDataSource(impl: ExampleRemoteDataSourceImpl): ExampleRemoteDataSource
+
+    @TestingRemoteDataSourceQualifier
+    @Binds
+    fun bindTestingRemoteDataSource(impl: TestingRemoteDataSourceImpl): ExampleRemoteDataSource
 }
